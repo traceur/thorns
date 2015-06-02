@@ -72,6 +72,7 @@ thorns_project 分布式异步队列系统
 	$ sudo cp /home/thorns/src/supervisord_server.conf /etc/supervisord.conf
 	/* 修改 /etc/supervisord.conf 141行 修改redis ip为你自己的ip --broker=redis://127.0.0.1:6379/0 */
 	/* 修改 /etc/supervisord.conf 153行 修改programe为你想定义的worker名称 [program:worker-ringzero] */
+	/* 3处Home路径修改 */	
 	$ sudo vim /etc/supervisord.conf
 	/* 启动 supervisord */
 	$ supervisord -c /etc/supervisord.conf
@@ -83,7 +84,7 @@ thorns_project 分布式异步队列系统
 	3、修改tasks.py内的芹菜配置
 	对应你自己的redis-server服务器IP
 	BROKER_URL = 'redis://120.132.54.90:6379/0',
-	对应你自己的MySQL-server服务器IP
+	对应你自己的MySQL-server服务器IP、文件路径
 	CELERY_RESULT_BACKEND = 'db+mysql://celery:celery1@3Wscan@42.62.52.62:443/wscan',
 
 	配置完毕后，就可以部署多台客户端进行分布式任务执行了
