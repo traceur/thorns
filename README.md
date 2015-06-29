@@ -118,6 +118,7 @@ thorns_project 分布式异步队列系统
 	$ sudo pip install supervisor
 	$ sudo cp /home/thorns/src/supervisord_client.conf /etc/supervisord.conf
 	/* 修改 /etc/supervisord.conf 140行 修改programe为你想定义的worker名称 [program:worker-ringzero] */
+	/* Home路径修改 */	
 	$ sudo vim /etc/supervisord.conf
 	/* 启动 supervisord */
 	$ supervisord -c /etc/supervisord.conf
